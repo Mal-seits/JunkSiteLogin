@@ -1,0 +1,24 @@
+﻿@model LogInViewModel
+
+<div class="container">
+    <main role="main" class="pb-3" style="margin-top: 70px;">
+        <div class="row" style="margin-top: 20px;">
+            @if (Model.Alert != null)
+            {
+                 <h1 class="alert-danger">@Model.Alert</h1>
+            }
+            <div class="col-md-6 offset-md-3 jumbotron">
+                <h1>Sign In!</h1>
+                <form method="post" action="/account/login">
+                   
+                    <input type="text" class="form-control" name="email" placeholder="Email" />
+                    <br />
+                    <input type="password" class="form-control" name="password" placeholder="Password" />
+                    <br />
+                    <button class="btn btn-primary btn-block btn-lg">Sign In</button>
+                    <a href="/account/Signup">Don't have an account? Sign up here!</a>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
